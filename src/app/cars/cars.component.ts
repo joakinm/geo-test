@@ -16,10 +16,6 @@ export class CarsComponent implements OnInit {
     this.data.fetchCars();
     this.carsList = this.carsServ.getCars();
     this.carsServ.CarsChanged.subscribe(
-      (c: Car[]) =>{this.carsList = c; console.log(this.carsList)});
-      console.log(this.carsList);
-  }
-  onGetData(){
-
+      (c: Car[]) =>{this.carsList = c});
   }
 }

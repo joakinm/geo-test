@@ -1,9 +1,10 @@
-<body class="container">
-    <h3>Lista Autos</h3>
-    <div class="row">
-        <div class="col-sm-8" >
-            <app-car-item *ngFor="let c of carsList, let i= index" [car]="c" [index]="i"></app-car-item>
-        </div>
+<h3>Lista Autos</h3>
+<div class="row">
+    <div class="col-sm-6" >
+        <app-car-item *ngFor="let c of carsList, let i= index" [car]="c" [index]="i"></app-car-item>
     </div>
-</body>
+    <div class="col-sm-6" >
+        <router-outlet></router-outlet>
+    </div>
 
+</div>
