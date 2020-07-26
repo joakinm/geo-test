@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { CarsComponent } from './cars/cars/cars.component';
+import { CarsComponent } from './cars/cars.component';
+import { CarItemComponent } from './cars/car-item/car-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CarsComponent
+    CarsComponent,
+    CarItemComponent
   ],
   imports: [
     BrowserModule,
