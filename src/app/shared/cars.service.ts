@@ -20,14 +20,7 @@ export class CarsService {
   getCars(){
     return this.cars.slice();
   }
-  getCarId(){
-    return this.carDetails;
-  }
   //----------ADD
-  addCarID(carDet:CarDetail){
-    this.carDetails = carDet;
-    this.carDetailChanged.next(this.carDetails);
-  }
   addCars(cars:Car[]){
     this.cars = cars;
     this.CarsChanged.next(this.cars.slice());

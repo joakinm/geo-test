@@ -1,1 +1,16 @@
-<h3>{{carDetailed.name}}</h3>
+<div *ngIf="carDetailed">
+    <h2 >{{carDetailed.name}}</h2>
+    <h3>Caracteristicas: </h3>
+    <ul *ngFor="let features of carDetailed.model_features">
+        <li>{{features.name}}</li>
+        <li>{{features.description}}</li>
+        <img src="https://challenge.agenciaego.tech{{features.photo}}" alt="{{features.name}}">
+    </ul>
+    <h3>Destacado en el modelo:</h3>
+    <ul *ngFor="let highligts of carDetailed.model_highlights">
+
+        <li>{{highligts.title}}</li>
+        <li>{{highligts.content}}</li>
+        <img src="https://challenge.agenciaego.tech{{highligts.image}}" alt="{{highligts.title}}">
+    </ul>
+</div>

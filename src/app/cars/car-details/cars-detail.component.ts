@@ -4,6 +4,7 @@ import { CarsService } from 'src/app/shared/cars.service';
 import { CarDetail } from 'models/car-detail';
 import { DataService } from 'src/app/shared/data.service';
 
+
 @Component({
   selector: 'app-car-details',
   templateUrl: './cars-detail.component.html',
@@ -18,11 +19,9 @@ export class CarDetailsComponent implements OnInit {
     this.routeAct.params.subscribe(
       (params : Params) => {this.id = +params['id'];
       this.data.fetchCarId(this.id).subscribe(carDet => {
-        this.CarServ.addCarID(carDet);
-        this.carDetailed = this.CarServ.getCarId();
+        this.carDetailed = carDet;
       })
       ,err=>{return alert(err)};
-      
       });
   }
 }
