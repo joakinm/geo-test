@@ -8,6 +8,7 @@ import { CarItemComponent } from './cars/car-item/car-item.component';
 import { CarDetailsComponent } from './cars/car-details/cars-detail.component';
 import { CarsStartComponent } from './cars/cars-start/cars-start.component';
 import { HeaderComponent } from './header/header/header.component';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { HeaderComponent } from './header/header/header.component';
     CarItemComponent,
     CarDetailsComponent,
     CarsStartComponent,
-    HeaderComponent
+    HeaderComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
