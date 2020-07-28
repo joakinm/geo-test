@@ -18,4 +18,8 @@ export class CarsComponent implements OnInit {
     this.carsServ.CarsChanged.subscribe(
       (c: Car[]) =>{this.carsList = c});
   }
+
+  onSortType(type:string){
+    this.carsList = this.carsServ.sortByType(type);
+  }
 }

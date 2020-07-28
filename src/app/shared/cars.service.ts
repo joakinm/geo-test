@@ -26,4 +26,24 @@ export class CarsService {
     this.CarsChanged.next(this.cars.slice());
   }
 
+  sortByType(type:string){
+    let orderedCars = []
+    switch(type){
+      case 'segment': { 
+        orderedCars = this.cars.sort((a,b)=>(a.segment.localeCompare(b.segment)));
+        break; 
+     } 
+     case 'year': { 
+      orderedCars = this.cars.sort((a,b)=>a.year -b.year);
+      break; 
+    } case 'name': { 
+      orderedCars = this.cars.sort((a,b)=>(a.name.localeCompare(b.name)));
+      break; 
+  } 
+    }
+    this.cars = orderedCars;
+    this.CarsChanged.next(this.cars.slice())
+    return this.cars;
+
+  }
 }
