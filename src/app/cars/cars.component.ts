@@ -11,7 +11,7 @@ import { CarsService } from 'src/app/shared/cars.service';
 export class CarsComponent implements OnInit {
   constructor(private data: DataService,private carsServ:CarsService) {this.carsList = [];}
   carsList : Car[];
-
+  filteredProp = '';
   ngOnInit(): void {
     this.data.fetchCars();
     this.carsList = this.carsServ.getCars();

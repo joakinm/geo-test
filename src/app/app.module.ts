@@ -9,6 +9,8 @@ import { CarDetailsComponent } from './cars/car-details/cars-detail.component';
 import { CarsStartComponent } from './cars/cars-start/cars-start.component';
 import { HeaderComponent } from './header/header/header.component';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { FilterPipe } from './shared/filter.pipe';
+import { FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -19,12 +21,14 @@ import { DropdownDirective } from './shared/dropdown.directive';
     CarDetailsComponent,
     CarsStartComponent,
     HeaderComponent,
-    DropdownDirective
+    DropdownDirective,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

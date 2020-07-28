@@ -1,5 +1,6 @@
 <div>
     <span class="lead">Lista Autos</span>
+    <input type="text" [(ngModel)]='filteredProp'>
     <div  class="btn-group" appDropdown>
         <button class="btn btn-primary dropdown-toggle">Ordenar por <span class="caret"></span></button>
         <ul class="dropdown-menu">
@@ -8,13 +9,13 @@
             <li><a style="cursor:pointer;" (click)="onSortType('name')">nombre</a></li>
         </ul>
     </div>
+    <hr>
 </div>
 <div class="row">
     <div class="col-sm-4" >
-            <app-car-item *ngFor="let c of carsList, let i= index" [car]="c" [index]="i"></app-car-item>
+            <app-car-item *ngFor="let c of carsList | filter:filteredProp, let i= index" [car]="c" [index]="i"></app-car-item>
     </div>
     <div class="col-sm-8" >
         <router-outlet></router-outlet>
     </div>
-
 </div>
